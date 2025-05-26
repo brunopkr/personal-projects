@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: rep_deliveries_extended
+    description: |
+      Enriched delivery data combining deliveries, packages, and driver info.
+    columns:
+      - name: delivery_id
+        description: Unique identifier for each delivery
+        tests:
+          - not_null
+          - unique
+      - name: status
+        description: Current status of the delivery
+      - name: on_time
+        description: Boolean flag indicating if delivery was on time
+      - name: delivery_time
+        description: Timestamp when delivery was completed
+      - name: package_id
+        description: Unique package identifier
+        tests:
+          - not_null
+      - name: weight
+        description: Weight of the package in kg
+      - name: weight_category
+        description: Categorization of package weight (Light, Medium, Heavy)
+      - name: origin_hub
+        description: Starting hub of the package
+      - name: destination_city
+        description: Final delivery city
+      - name: driver_name
+        description: Full name of the driver responsible
+      - name: region
+        description: Region the driver operates in
+      - name: overworked
+        description: Boolean indicating if driver worked more than 8 hours on shift

@@ -1,7 +1,7 @@
 {{ config(
     materialized='table',
-    schema='analysis',
-    alias='packages_rep'
+    schema='staging',
+    alias='stg_packages'
 ) }}
 
 with source as (

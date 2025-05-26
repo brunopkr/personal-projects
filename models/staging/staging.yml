@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_packages
+    description: Standardized package data with a weight category
+    columns:
+      - name: package_id
+        tests: [not_null, unique]
+      - name: weight_category
+        description: Categorizes packages by weight
+  - name: stg_deliveries
+    description: Standardized deliverables data with a on_time category
+    columns:
+      - name: delivery_id
+        tests: [not_null, unique]
+      - name: on_time
+        description: Delivery respected expected delivery time
+  - name: stg_drivers
+    description: Standardized drivers and driver_shifts data with a overworked category
+    columns:
+      - name: driver_id
+        tests: [not_null]
+      - name: weight_category
+        description: Driver worked more than eight hours a day

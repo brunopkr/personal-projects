@@ -3,3 +3,5 @@ sources:
     tables:
       - name: packages
       - name: deliveries
+      - name: drivers
+      - name: driver_shifts
