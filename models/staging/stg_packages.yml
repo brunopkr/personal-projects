@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_packages
+    description: Standardized package data with a weight category
+    columns:
+      - name: package_id
+        tests: [not_null, unique]
+      - name: weight_category
+        description: Categorizes packages by weight
